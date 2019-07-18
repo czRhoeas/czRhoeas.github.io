@@ -339,17 +339,17 @@
 <p><img src="/2019/07/18/西瓜书第六章/6.png" alt="式（6.8）"></p>
 <p><img src="/2019/07/18/西瓜书第六章/8.png" alt="式（6.8）"></p>
 <p>拉格朗日乘子对应训练样本（xi，yi），上述过程需满足KKT条件（Karush-Kuhn-Tuchker）</p>
-<p><img src="/2019/07/18/西瓜书第六章/9.png" alt="式（6.8）"></p>
-<p><img src="/2019/07/18/西瓜书第六章/10.png" alt="式（6.8）"></p>
+<p><img src="/2019/07/18/西瓜书第六章/9.PNG" alt="式（6.8）"></p>
+<p><img src="/2019/07/18/西瓜书第六章/10.PNG" alt="式（6.8）"></p>
 <p>支持向量重要性质1：训练完成后，大部分训练样本都不需要保留，最终模型仅与支持向量有关</p>
 <h3 id="SMOSequential-Minimal-Optimization）算法"><a href="#SMOSequential-Minimal-Optimization）算法" class="headerlink" title="SMOSequential Minimal Optimization）算法"></a>SMOSequential Minimal Optimization）算法</h3><p>提出原因：6.11是二次规划问题，可使用通用二次规划算法求解，然，该问题规模正比于训练样本数，在实际任务中开销大。</p>
 <p>基本思想</p>
-<p><img src="/2019/07/18/西瓜书第六章/11.png" alt="式（6.8）"></p>
+<p><img src="/2019/07/18/西瓜书第六章/11.PNG" alt="式（6.8）"></p>
 <p>注：只要ai，aj中有一个不满足KKT，目标函数就会在迭代后减小</p>
 <p>KKT违背程度越大，变量更新后可能导致的目标函数值减幅越大，SMO先选取违背KKT条件最大的变量，第二选取使目标函数值减小最快的变量</p>
 <p>由于比较各变量对应目标函数值减幅的复杂度过高，SMO采用启发式：使选取的两变量对应样本间间隔最大，即差别大的变量比相似变量更新，带给目值更大的变化</p>
 <p>SMO高效原因：固定其他参数后，仅优化两个参数过程能做到非常高效，具体，仅考虑ai和aj时，6.11中约束可重写为</p>
-<p><img src="/2019/07/18/西瓜书第六章/12.png" alt="式（6.8）"></p>
+<p><img src="/2019/07/18/西瓜书第六章/12.PNG" alt="式（6.8）"></p>
 <h2 id="6-3核函数"><a href="#6-3核函数" class="headerlink" title="6.3核函数"></a>6.3核函数</h2>
           
         
