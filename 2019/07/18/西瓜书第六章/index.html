@@ -79,19 +79,29 @@
 
 
 
-<meta name="description" content="第六章 支持向量机6.2 对偶问题用拉格朗日乘子法求解式（6.6）即可得到其“对偶问题”">
+<meta name="description" content="6.2 对偶问题用拉格朗日乘子法求解式（6.6）即可得到其“对偶问题”        拉格朗日乘子对应训练样本（xi，yi），上述过程需满足KKT条件（Karush-Kuhn-Tuchker）   支持向量重要性质1：训练完成后，大部分训练样本都不需要保留，最终模型仅与支持向量有关 SMOSequential Minimal Optimization）算法提出原因：6.11是二次规划问题，可使用通">
 <meta property="og:type" content="article">
 <meta property="og:title" content="西瓜书第六章">
 <meta property="og:url" content="http://yoursite.com/2019/07/18/西瓜书第六章/index.html">
 <meta property="og:site_name" content="czRhoeas">
-<meta property="og:description" content="第六章 支持向量机6.2 对偶问题用拉格朗日乘子法求解式（6.6）即可得到其“对偶问题”">
+<meta property="og:description" content="6.2 对偶问题用拉格朗日乘子法求解式（6.6）即可得到其“对偶问题”        拉格朗日乘子对应训练样本（xi，yi），上述过程需满足KKT条件（Karush-Kuhn-Tuchker）   支持向量重要性质1：训练完成后，大部分训练样本都不需要保留，最终模型仅与支持向量有关 SMOSequential Minimal Optimization）算法提出原因：6.11是二次规划问题，可使用通">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/%E8%A5%BF%E7%93%9C%E4%B9%A6%E7%AC%AC%E5%85%AD%E7%AB%A0%5C6-8.png">
-<meta property="og:updated_time" content="2019-07-18T14:19:55.810Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/2.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/3.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/7.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/5.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/6.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/8.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/9.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/10.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/11.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/12.png">
+<meta property="og:updated_time" content="2019-07-18T16:41:44.063Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="西瓜书第六章">
-<meta name="twitter:description" content="第六章 支持向量机6.2 对偶问题用拉格朗日乘子法求解式（6.6）即可得到其“对偶问题”">
-<meta name="twitter:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/%E8%A5%BF%E7%93%9C%E4%B9%A6%E7%AC%AC%E5%85%AD%E7%AB%A0%5C6-8.png">
+<meta name="twitter:description" content="6.2 对偶问题用拉格朗日乘子法求解式（6.6）即可得到其“对偶问题”        拉格朗日乘子对应训练样本（xi，yi），上述过程需满足KKT条件（Karush-Kuhn-Tuchker）   支持向量重要性质1：训练完成后，大部分训练样本都不需要保留，最终模型仅与支持向量有关 SMOSequential Minimal Optimization）算法提出原因：6.11是二次规划问题，可使用通">
+<meta name="twitter:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/1.png">
 
 
 
@@ -331,9 +341,27 @@
       
 
       
-        <h1 id="第六章-支持向量机"><a href="#第六章-支持向量机" class="headerlink" title="第六章 支持向量机"></a>第六章 支持向量机</h1><h2 id="6-2-对偶问题"><a href="#6-2-对偶问题" class="headerlink" title="6.2 对偶问题"></a>6.2 对偶问题</h2><p>用拉格朗日乘子法求解式（6.6）即可得到其“对偶问题”</p>
-<p><img src="/2019/07/18/西瓜书第六章/%E8%A5%BF%E7%93%9C%E4%B9%A6%E7%AC%AC%E5%85%AD%E7%AB%A0%5C6-8.png" alt="式（6.8）"></p>
-
+        <h2 id="6-2-对偶问题"><a href="#6-2-对偶问题" class="headerlink" title="6.2 对偶问题"></a>6.2 对偶问题</h2><p>用拉格朗日乘子法求解式（6.6）即可得到其“对偶问题”</p>
+<p><img src="/2019/07/18/西瓜书第六章/1.png" alt="式（6.8）"></p>
+<p><img src="/2019/07/18/西瓜书第六章/2.png" alt="式（6.8）"></p>
+<p><img src="/2019/07/18/西瓜书第六章/3.png" alt="式（6.8）"></p>
+<p><img src="/2019/07/18/西瓜书第六章/7.png" alt="式（6.8）"></p>
+<p><img src="/2019/07/18/西瓜书第六章/5.png" alt="式（6.8）"></p>
+<p><img src="/2019/07/18/西瓜书第六章/6.png" alt="式（6.8）"></p>
+<p><img src="/2019/07/18/西瓜书第六章/8.png" alt="式（6.8）"></p>
+<p>拉格朗日乘子对应训练样本（xi，yi），上述过程需满足KKT条件（Karush-Kuhn-Tuchker）</p>
+<p><img src="/2019/07/18/西瓜书第六章/9.png" alt="式（6.8）"></p>
+<p><img src="/2019/07/18/西瓜书第六章/10.png" alt="式（6.8）"></p>
+<p>支持向量重要性质1：训练完成后，大部分训练样本都不需要保留，最终模型仅与支持向量有关</p>
+<h3 id="SMOSequential-Minimal-Optimization）算法"><a href="#SMOSequential-Minimal-Optimization）算法" class="headerlink" title="SMOSequential Minimal Optimization）算法"></a>SMOSequential Minimal Optimization）算法</h3><p>提出原因：6.11是二次规划问题，可使用通用二次规划算法求解，然，该问题规模正比于训练样本数，在实际任务中开销大。</p>
+<p>基本思想</p>
+<p><img src="/2019/07/18/西瓜书第六章/11.png" alt="式（6.8）"></p>
+<p>注：只要ai，aj中有一个不满足KKT，目标函数就会在迭代后减小</p>
+<p>KKT违背程度越大，变量更新后可能导致的目标函数值减幅越大，SMO先选取违背KKT条件最大的变量，第二选取使目标函数值减小最快的变量</p>
+<p>由于比较各变量对应目标函数值减幅的复杂度过高，SMO采用启发式：使选取的两变量对应样本间间隔最大，即差别大的变量比相似变量更新，带给目值更大的变化</p>
+<p>SMO高效原因：固定其他参数后，仅优化两个参数过程能做到非常高效，具体，仅考虑ai和aj时，6.11中约束可重写为</p>
+<p><img src="/2019/07/18/西瓜书第六章/12.png" alt="式（6.8）"></p>
+<h2 id="6-3核函数"><a href="#6-3核函数" class="headerlink" title="6.3核函数"></a>6.3核函数</h2>
       
     </div>
     
@@ -479,7 +507,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第六章-支持向量机"><span class="nav-number">1.</span> <span class="nav-text">第六章 支持向量机</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-对偶问题"><span class="nav-number">1.1.</span> <span class="nav-text">6.2 对偶问题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-2-对偶问题"><span class="nav-number">1.</span> <span class="nav-text">6.2 对偶问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SMOSequential-Minimal-Optimization）算法"><span class="nav-number">1.1.</span> <span class="nav-text">SMOSequential Minimal Optimization）算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-3核函数"><span class="nav-number">2.</span> <span class="nav-text">6.3核函数</span></a></li></ol></div>
             
 
           </div>
