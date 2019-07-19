@@ -278,7 +278,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2019/07/18/西瓜书第六章/" itemprop="url">西瓜书第六章</a></h1>
+                <a class="post-title-link" href="/2019/07/18/西瓜书第六章/" itemprop="url">西瓜书第六章 支持向量机</a></h1>
         
 
         <div class="post-meta">
@@ -330,7 +330,30 @@
       
         
           
-            <h1 id="对偶问题"><a href="#对偶问题" class="headerlink" title="对偶问题"></a>对偶问题</h1><h2 id="拉格朗日乘子法"><a href="#拉格朗日乘子法" class="headerlink" title="拉格朗日乘子法"></a>拉格朗日乘子法</h2><p>不考虑极值是否存在，假设优化问题一定有解</p>
+            <h1 id="间隔与支持向量"><a href="#间隔与支持向量" class="headerlink" title="间隔与支持向量"></a>间隔与支持向量</h1><h2 id="预备知识1-向量投影"><a href="#预备知识1-向量投影" class="headerlink" title="预备知识1 向量投影"></a>预备知识1 向量投影</h2><p><img src="/2019/07/18/西瓜书第六章/43.png" alt></p>
+<h2 id="预备知识2-超平面法向量"><a href="#预备知识2-超平面法向量" class="headerlink" title="预备知识2 超平面法向量"></a>预备知识2 超平面法向量</h2><p><img src="/2019/07/18/西瓜书第六章/44.png" alt></p>
+<h2 id="划分超平面"><a href="#划分超平面" class="headerlink" title="划分超平面"></a>划分超平面</h2><p>分类学习的基本想法：基于训练集D在样本空间中找到一个划分超平面，将不同类别的样本分开。</p>
+<p><strong>如何寻找划分超平面？</strong></p>
+<ul>
+<li>位于两类训练样本“正中间”的超平面，对训练样本局部扰动的“容忍”性最好。</li>
+<li>例：由于训练集的局限性或噪声，训练集外样本可能比图中训练样本更接近两个类的分割界，红色超平面受影响最小，即，这个划分超平面产生的分类结果是鲁棒的，对未见示例的泛化能力最强</li>
+</ul>
+<p><img src="/2019/07/18/西瓜书第六章/41.png" alt></p>
+<p><img src="/2019/07/18/西瓜书第六章/42.png" alt></p>
+<p><img src="/2019/07/18/西瓜书第六章/45.png" alt></p>
+<p><img src="/2019/07/18/西瓜书第六章/46.png" alt></p>
+<h2 id="支持向量与间隔"><a href="#支持向量与间隔" class="headerlink" title="支持向量与间隔"></a>支持向量与间隔</h2><p>支持向量（support vector）：距离超平面最近的几个训练样本点使6.3的等号成立，被称为支持向量</p>
+<p>间隔（margin）：两个异类支持向量到超平面距离之和</p>
+<p><img src="/2019/07/18/西瓜书第六章/47.png" alt></p>
+<p><img src="/2019/07/18/西瓜书第六章/48.png" alt></p>
+<h2 id="支持向量机基本型"><a href="#支持向量机基本型" class="headerlink" title="支持向量机基本型"></a>支持向量机基本型</h2><p><img src="/2019/07/18/西瓜书第六章/49.png" alt></p>
+<p><strong>【解释6.6】</strong></p>
+<ul>
+<li>6.6约束条件：训练样本线性可分，即不存在被分类错误的样本，因此不存在欠拟合问题</li>
+<li>6.6目标函数：寻找最大间隔的划分超平面——分类结果最鲁棒、对未见示例的泛化能力最强，相当于寻找最不可能过拟合的分类超平面</li>
+<li>防止过拟合引入正则化，正则化——在最小化的目标函数中加入分类器的所有参数的模值的平方</li>
+</ul>
+<h1 id="对偶问题"><a href="#对偶问题" class="headerlink" title="对偶问题"></a>对偶问题</h1><h2 id="拉格朗日乘子法"><a href="#拉格朗日乘子法" class="headerlink" title="拉格朗日乘子法"></a>拉格朗日乘子法</h2><p>不考虑极值是否存在，假设优化问题一定有解</p>
 <p><img src="/2019/07/18/西瓜书第六章/17.png" alt="式1"><br><img src="/2019/07/18/西瓜书第六章/18.png" alt="式1"></p>
 <h3 id="如何求下确界表达式？"><a href="#如何求下确界表达式？" class="headerlink" title="如何求下确界表达式？"></a>如何求下确界表达式？</h3><p><img src="/2019/07/18/西瓜书第六章/22.png" alt="式1"></p>
 <h2 id="对偶问题-1"><a href="#对偶问题-1" class="headerlink" title="对偶问题"></a>对偶问题</h2><p>用拉格朗日乘子法求解式（6.6）即可得到其“对偶问题”</p>
@@ -347,10 +370,10 @@
 <p><img src="/2019/07/18/西瓜书第六章/9-1.png" alt="式（6.8）"></p>
 <p>注：1.不等式约束拉格朗日乘子不小于0；2.（6.6）约束条件，用f（xi）代替wx+b； 3.前两式必有一个为0</p>
 <p><img src="/2019/07/18/西瓜书第六章/13.png" alt="式（6.8）"><br><img src="/2019/07/18/西瓜书第六章/10-1.png" alt="式（6.8）"></p>
-<p>支持向量重要性质1：训练完成后，大部分训练样本都不需要保留，最终模型仅与支持向量有关</p>
+<p><strong>支持向量重要性质1：训练完成后，大部分训练样本都不需要保留，最终模型仅与支持向量有关</strong></p>
 <p><a href="http://www.csc.kth.se/utbildning/kth/kurser/DD3364/Lectures/Duality.pdf" target="_blank" rel="noopener">KKT conditions and Duality</a></p>
 <p><a href="http://www.csc.kth.se/utbildning/kth/kurser/DD3364/Lectures/KKT.pdf" target="_blank" rel="noopener">Lagrange Multipliers and the Karush-Kuhn-Tucker conditions</a></p>
-<h2 id="SMO（Sequential-Minimal-Optimization）算法"><a href="#SMO（Sequential-Minimal-Optimization）算法" class="headerlink" title="SMO（Sequential Minimal Optimization）算法"></a>SMO（Sequential Minimal Optimization）算法</h2><p>提出原因：6.11是二次规划问题，可使用通用二次规划算法求解，然，该问题规模正比于训练样本数，在实际任务中开销大。</p>
+<h2 id="SMO（Sequential-Minimal-Optimization）算法"><a href="#SMO（Sequential-Minimal-Optimization）算法" class="headerlink" title="SMO（Sequential Minimal Optimization）算法"></a>SMO（Sequential Minimal Optimization）算法</h2><p><strong>提出原因</strong>：6.11是二次规划问题，可使用通用二次规划算法求解，然，该问题规模正比于训练样本数，在实际任务中开销大。</p>
 <p>基本思想</p>
 <p><img src="/2019/07/18/西瓜书第六章/11-1.png" alt="式（6.8）"></p>
 <p>注：只要ai，aj中有一个不满足KKT，目标函数就会在迭代后减小</p>
