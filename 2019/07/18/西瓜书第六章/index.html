@@ -79,13 +79,13 @@
 
 
 
-<meta name="description" content="间隔与支持向量预备知识1 向量投影 预备知识2 超平面法向量 划分超平面分类学习的基本想法：基于训练集D在样本空间中找到一个划分超平面，将不同类别的样本分开。 如何寻找划分超平面？  位于两类训练样本“正中间”的超平面，对训练样本局部扰动的“容忍”性最好。 例：由于训练集的局限性或噪声，训练集外样本可能比图中训练样本更接近两个类的分割界，红色超平面受影响最小，即，这个划分超平面产生的分类结果是鲁棒">
+<meta name="description" content="间隔与支持向量预备知识1 向量投影">
 <meta name="keywords" content="西瓜书">
 <meta property="og:type" content="article">
 <meta property="og:title" content="西瓜书第六章 支持向量机">
 <meta property="og:url" content="http://yoursite.com/2019/07/18/西瓜书第六章/index.html">
 <meta property="og:site_name" content="czRhoeas">
-<meta property="og:description" content="间隔与支持向量预备知识1 向量投影 预备知识2 超平面法向量 划分超平面分类学习的基本想法：基于训练集D在样本空间中找到一个划分超平面，将不同类别的样本分开。 如何寻找划分超平面？  位于两类训练样本“正中间”的超平面，对训练样本局部扰动的“容忍”性最好。 例：由于训练集的局限性或噪声，训练集外样本可能比图中训练样本更接近两个类的分割界，红色超平面受影响最小，即，这个划分超平面产生的分类结果是鲁棒">
+<meta property="og:description" content="间隔与支持向量预备知识1 向量投影">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/43.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/44.png">
@@ -133,10 +133,10 @@
 <meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/38.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/39.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/40.png">
-<meta property="og:updated_time" content="2019-07-19T12:43:29.679Z">
+<meta property="og:updated_time" content="2019-07-19T12:48:00.368Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="西瓜书第六章 支持向量机">
-<meta name="twitter:description" content="间隔与支持向量预备知识1 向量投影 预备知识2 超平面法向量 划分超平面分类学习的基本想法：基于训练集D在样本空间中找到一个划分超平面，将不同类别的样本分开。 如何寻找划分超平面？  位于两类训练样本“正中间”的超平面，对训练样本局部扰动的“容忍”性最好。 例：由于训练集的局限性或噪声，训练集外样本可能比图中训练样本更接近两个类的分割界，红色超平面受影响最小，即，这个划分超平面产生的分类结果是鲁棒">
+<meta name="twitter:description" content="间隔与支持向量预备知识1 向量投影">
 <meta name="twitter:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/43.png">
 
 
@@ -378,6 +378,8 @@
 
       
         <h1 id="间隔与支持向量"><a href="#间隔与支持向量" class="headerlink" title="间隔与支持向量"></a>间隔与支持向量</h1><h2 id="预备知识1-向量投影"><a href="#预备知识1-向量投影" class="headerlink" title="预备知识1 向量投影"></a>预备知识1 向量投影</h2><p><img src="/2019/07/18/西瓜书第六章/43.png" alt></p>
+<a id="more"></a>
+
 <h2 id="预备知识2-超平面法向量"><a href="#预备知识2-超平面法向量" class="headerlink" title="预备知识2 超平面法向量"></a>预备知识2 超平面法向量</h2><p><img src="/2019/07/18/西瓜书第六章/44.png" alt></p>
 <h2 id="划分超平面"><a href="#划分超平面" class="headerlink" title="划分超平面"></a>划分超平面</h2><p>分类学习的基本想法：基于训练集D在样本空间中找到一个划分超平面，将不同类别的样本分开。</p>
 <p><strong>如何寻找划分超平面？</strong></p>
