@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="-西瓜书,">
 
 
 
@@ -80,6 +80,7 @@
 
 
 <meta name="description" content="6.2 对偶问题1.拉格朗日乘子法不考虑极值是否存在，假设优化问题一定有解  如何求下确界表达式？ 2.对偶问题用拉格朗日乘子法求解式（6.6）即可得到其“对偶问题” 式6.8 式6.9、6.10 式6.11 式6.12 将式6.9直接代入即可 x——待预测示例（未见示例） xi——预测中示例 拉格朗日乘子求解——SMO算法 已知拉格朗日乘子，6.9求得w，6.17和6.18得到偏移项b 3.KK">
+<meta name="keywords" content="-西瓜书">
 <meta property="og:type" content="article">
 <meta property="og:title" content="西瓜书第六章">
 <meta property="og:url" content="http://yoursite.com/2019/07/18/西瓜书第六章/index.html">
@@ -106,7 +107,24 @@
 <meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/14.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/15.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/16.png">
-<meta property="og:updated_time" content="2019-07-19T07:55:51.779Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/24-1.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/25.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/26.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/27.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/28.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/29-1.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/30-1.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/31.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/32.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/33-1.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/34.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/35.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/36.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/37.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/38.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/39.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/18/西瓜书第六章/40.png">
+<meta property="og:updated_time" content="2019-07-19T11:02:40.974Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="西瓜书第六章">
 <meta name="twitter:description" content="6.2 对偶问题1.拉格朗日乘子法不考虑极值是否存在，假设优化问题一定有解  如何求下确界表达式？ 2.对偶问题用拉格朗日乘子法求解式（6.6）即可得到其“对偶问题” 式6.8 式6.9、6.10 式6.11 式6.12 将式6.9直接代入即可 x——待预测示例（未见示例） xi——预测中示例 拉格朗日乘子求解——SMO算法 已知拉格朗日乘子，6.9求得w，6.17和6.18得到偏移项b 3.KK">
@@ -381,9 +399,60 @@
 <h1 id="6-3核函数"><a href="#6-3核函数" class="headerlink" title="6.3核函数"></a>6.3核函数</h1><p>假设训练样本线性可分，即存在一个划分超平面能将训练样本正确分类，实际中，“异或”问题就不是线性可分的</p>
 <p><img src="/2019/07/18/西瓜书第六章/14.png" alt="式（6.8）"></p>
 <p>解决方法：将样本从原始空间映射到一个更高维的特征空间，使其在特征空间内线性可分。例：如图，将原始二维映射到三维，能找到一个合适的划分超平面。如果空间是有限维，即属性数有限，那么一定存在一个高维特征空间使样本可分。</p>
-<h2 id="特征空间划分超平面模型"><a href="#特征空间划分超平面模型" class="headerlink" title="特征空间划分超平面模型"></a>特征空间划分超平面模型</h2><p><img src="/2019/07/18/西瓜书第六章/15.png" alt="式（6.8）"></p>
+<h2 id="1-特征空间划分超平面模型"><a href="#1-特征空间划分超平面模型" class="headerlink" title="1.特征空间划分超平面模型"></a>1.特征空间划分超平面模型</h2><p><img src="/2019/07/18/西瓜书第六章/15.png" alt="式（6.8）"></p>
 <p>注意：W维度不再与x相同</p>
 <p><img src="/2019/07/18/西瓜书第六章/16.png" alt="式（6.8）"></p>
+<h2 id="2-核函数（kernel-function）"><a href="#2-核函数（kernel-function）" class="headerlink" title="2.核函数（kernel function）"></a>2.核函数（kernel function）</h2><h3 id="式6-22"><a href="#式6-22" class="headerlink" title="式6.22"></a>式6.22</h3><p>式6.22 为核函数定义，即核函数可以分解成两个向量的内积</p>
+<p><img src="/2019/07/18/西瓜书第六章/24-1.png" alt="式（6.8）"></p>
+<h3 id="式6-24"><a href="#式6-24" class="headerlink" title="式6.24"></a>式6.24</h3><p>式6.23求解后得到6.24， 6.24显示出模型最优解可通过训练样本的核函数展开，亦称“支持向量展式”（support vector expansion）</p>
+<p><img src="/2019/07/18/西瓜书第六章/25.png" alt="式（6.8）"></p>
+<h3 id="核函数定理"><a href="#核函数定理" class="headerlink" title="核函数定理"></a>核函数定理</h3><p><img src="/2019/07/18/西瓜书第六章/26.png" alt="式（6.8）"></p>
+<h3 id="常用核函数"><a href="#常用核函数" class="headerlink" title="常用核函数"></a>常用核函数</h3><p><img src="/2019/07/18/西瓜书第六章/27.png" alt="式（6.8）"></p>
+<h1 id="6-4-软间隔和正则化"><a href="#6-4-软间隔和正则化" class="headerlink" title="6.4 软间隔和正则化"></a>6.4 软间隔和正则化</h1><h2 id="1-解决问题"><a href="#1-解决问题" class="headerlink" title="1.解决问题"></a>1.解决问题</h2><p>前面讨论中，假定训练样本在样本空间或特征空间中是线性可分的，即存在一个超平面能将不同类样本完全划分开，然，实际上，很难确定合适核函数使其在样本空间线性可分，即，即便找到某个核函数，也存在过拟合问题。缓解该问题的一个办法：允许支持向量机在一些样本上出错，引入“软间隔概念”</p>
+<p><img src="/2019/07/18/西瓜书第六章/28.png" alt="式（6.8）"></p>
+<h2 id="2-软间隔和硬间隔"><a href="#2-软间隔和硬间隔" class="headerlink" title="2.软间隔和硬间隔"></a>2.软间隔和硬间隔</h2><p>硬间隔（hard margin）：所有样本满足约束6.3，即所有样本必须划分正确</p>
+<p>软间隔（soft margin）：允许某些样本不满足约束6.28</p>
+<p><img src="/2019/07/18/西瓜书第六章/29-1.png" alt="式（6.8）"></p>
+<h2 id="3-软间隔优化目标及软间隔支持向量机"><a href="#3-软间隔优化目标及软间隔支持向量机" class="headerlink" title="3.软间隔优化目标及软间隔支持向量机"></a>3.软间隔优化目标及软间隔支持向量机</h2><p>在最大化间隔同时，不满足约束条件的样本应尽可能少，优化目标可写为</p>
+<p><img src="/2019/07/18/西瓜书第六章/30-1.png" alt="式（6.8）"></p>
+<p><img src="/2019/07/18/西瓜书第六章/31.png" alt="式（6.8）"></p>
+<h2 id="4-替代损失"><a href="#4-替代损失" class="headerlink" title="4. 替代损失"></a>4. 替代损失</h2><p>替代损失（surrigate loss）</p>
+<p>替代损失函数具有较好的数学性质，如凸（函数）+ 连续函数 + 0/1 损失函数 的上界</p>
+<h3 id="三种常用的替代损失函数"><a href="#三种常用的替代损失函数" class="headerlink" title="三种常用的替代损失函数"></a>三种常用的替代损失函数</h3><p><img src="/2019/07/18/西瓜书第六章/32.png" alt="式（6.8）"></p>
+<h2 id="5-软间隔支持向量机（6-35）的拉格朗日函数"><a href="#5-软间隔支持向量机（6-35）的拉格朗日函数" class="headerlink" title="5.软间隔支持向量机（6.35）的拉格朗日函数"></a>5.软间隔支持向量机（6.35）的拉格朗日函数</h2><p>6.35 中每个样本都有一个对应的松弛变量，表征该样本不满足约束6.28的程度，是二次规划问题，通过拉格朗日乘子法得到拉格朗日函数</p>
+<p><img src="/2019/07/18/西瓜书第六章/33-1.png" alt="式（6.8）"></p>
+<p><img src="/2019/07/18/西瓜书第六章/34.png" alt="式（6.8）"></p>
+<h2 id="6-软间隔支持向量机（6-35）的对偶问题"><a href="#6-软间隔支持向量机（6-35）的对偶问题" class="headerlink" title="6.软间隔支持向量机（6.35）的对偶问题"></a>6.软间隔支持向量机（6.35）的对偶问题</h2><p><img src="/2019/07/18/西瓜书第六章/35.png" alt="式（6.8）"></p>
+<p><img src="/2019/07/18/西瓜书第六章/36.png" alt="式（6.8）"></p>
+<p><img src="/2019/07/18/西瓜书第六章/37.png" alt="式（6.8）"></p>
+<h2 id="7-软间隔向量机，KKT-条件"><a href="#7-软间隔向量机，KKT-条件" class="headerlink" title="7.软间隔向量机，KKT 条件"></a>7.软间隔向量机，KKT 条件</h2><p><img src="/2019/07/18/西瓜书第六章/38.png" alt="式（6.8）"></p>
+<h2 id="8-对率回归与支持向量机关系"><a href="#8-对率回归与支持向量机关系" class="headerlink" title="8.对率回归与支持向量机关系"></a>8.对率回归与支持向量机关系</h2><p>如果使用对率损失函数Llog来代替6.29中的0/1损失函数，几乎得到对率回归模型3.27</p>
+<p><img src="/2019/07/18/西瓜书第六章/39.png" alt="式（6.8）"></p>
+<p>支持向量机与对率回归优化目标相近，通常情况下性能相当</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">输出</th>
+<th align="center">用处</th>
+<th align="center">函数</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">对率回归</td>
+<td align="center">输出具有自然的概率意义，即在给出预测标记的同时也给出了概率</td>
+<td align="center">可直接用于多分类任务</td>
+<td align="center">光滑单调递减函数，不能导出类似支持向量机的概念，因此解依赖于更多的训练样本，预测开销更大</td>
+</tr>
+<tr>
+<td align="center">支持向量机</td>
+<td align="center">输出不具有概率意义，进行特殊处理后得到概率输出</td>
+<td align="center">需特殊处理后用于多分类任务</td>
+<td align="center">hinge有“平坦”零区域，使得支持向量机的解具有稀疏性</td>
+</tr>
+</tbody></table>
+<h2 id="9-正则化（regularization）"><a href="#9-正则化（regularization）" class="headerlink" title="9.正则化（regularization）"></a>9.正则化（regularization）</h2><p>正则化可理解为一种“罚函数法”，即对不希望得到的结果施以惩罚，从而使得优化过程趋向于希望目标。从贝叶斯估计的角度来看，正则化项可认为是提供了模型的先验概率。</p>
+<p><img src="/2019/07/18/西瓜书第六章/40.png" alt="式（6.8）"></p>
 
       
     </div>
@@ -398,6 +467,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/西瓜书/" rel="tag"># -西瓜书</a>
+          
+        </div>
       
 
       
@@ -502,6 +577,15 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index-1.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
 
           </nav>
 
@@ -530,7 +614,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#6-2-对偶问题"><span class="nav-number">1.</span> <span class="nav-text">6.2 对偶问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-拉格朗日乘子法"><span class="nav-number">1.1.</span> <span class="nav-text">1.拉格朗日乘子法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何求下确界表达式？"><span class="nav-number">1.1.1.</span> <span class="nav-text">如何求下确界表达式？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-对偶问题"><span class="nav-number">1.2.</span> <span class="nav-text">2.对偶问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#式6-8"><span class="nav-number">1.2.1.</span> <span class="nav-text">式6.8</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#式6-9、6-10"><span class="nav-number">1.2.2.</span> <span class="nav-text">式6.9、6.10</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#式6-11"><span class="nav-number">1.2.3.</span> <span class="nav-text">式6.11</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#式6-12"><span class="nav-number">1.2.4.</span> <span class="nav-text">式6.12</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-KKT条件（Karush-Kuhn-Tuchker）"><span class="nav-number">1.3.</span> <span class="nav-text">3.KKT条件（Karush-Kuhn-Tuchker）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-SMO（Sequential-Minimal-Optimization）算法"><span class="nav-number">1.4.</span> <span class="nav-text">4.SMO（Sequential Minimal Optimization）算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-3核函数"><span class="nav-number">2.</span> <span class="nav-text">6.3核函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#特征空间划分超平面模型"><span class="nav-number">2.1.</span> <span class="nav-text">特征空间划分超平面模型</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#6-2-对偶问题"><span class="nav-number">1.</span> <span class="nav-text">6.2 对偶问题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-拉格朗日乘子法"><span class="nav-number">1.1.</span> <span class="nav-text">1.拉格朗日乘子法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何求下确界表达式？"><span class="nav-number">1.1.1.</span> <span class="nav-text">如何求下确界表达式？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-对偶问题"><span class="nav-number">1.2.</span> <span class="nav-text">2.对偶问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#式6-8"><span class="nav-number">1.2.1.</span> <span class="nav-text">式6.8</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#式6-9、6-10"><span class="nav-number">1.2.2.</span> <span class="nav-text">式6.9、6.10</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#式6-11"><span class="nav-number">1.2.3.</span> <span class="nav-text">式6.11</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#式6-12"><span class="nav-number">1.2.4.</span> <span class="nav-text">式6.12</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-KKT条件（Karush-Kuhn-Tuchker）"><span class="nav-number">1.3.</span> <span class="nav-text">3.KKT条件（Karush-Kuhn-Tuchker）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-SMO（Sequential-Minimal-Optimization）算法"><span class="nav-number">1.4.</span> <span class="nav-text">4.SMO（Sequential Minimal Optimization）算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-3核函数"><span class="nav-number">2.</span> <span class="nav-text">6.3核函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-特征空间划分超平面模型"><span class="nav-number">2.1.</span> <span class="nav-text">1.特征空间划分超平面模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-核函数（kernel-function）"><span class="nav-number">2.2.</span> <span class="nav-text">2.核函数（kernel function）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#式6-22"><span class="nav-number">2.2.1.</span> <span class="nav-text">式6.22</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#式6-24"><span class="nav-number">2.2.2.</span> <span class="nav-text">式6.24</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#核函数定理"><span class="nav-number">2.2.3.</span> <span class="nav-text">核函数定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用核函数"><span class="nav-number">2.2.4.</span> <span class="nav-text">常用核函数</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#6-4-软间隔和正则化"><span class="nav-number">3.</span> <span class="nav-text">6.4 软间隔和正则化</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-解决问题"><span class="nav-number">3.1.</span> <span class="nav-text">1.解决问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-软间隔和硬间隔"><span class="nav-number">3.2.</span> <span class="nav-text">2.软间隔和硬间隔</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-软间隔优化目标及软间隔支持向量机"><span class="nav-number">3.3.</span> <span class="nav-text">3.软间隔优化目标及软间隔支持向量机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-替代损失"><span class="nav-number">3.4.</span> <span class="nav-text">4. 替代损失</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三种常用的替代损失函数"><span class="nav-number">3.4.1.</span> <span class="nav-text">三种常用的替代损失函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-软间隔支持向量机（6-35）的拉格朗日函数"><span class="nav-number">3.5.</span> <span class="nav-text">5.软间隔支持向量机（6.35）的拉格朗日函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-软间隔支持向量机（6-35）的对偶问题"><span class="nav-number">3.6.</span> <span class="nav-text">6.软间隔支持向量机（6.35）的对偶问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-软间隔向量机，KKT-条件"><span class="nav-number">3.7.</span> <span class="nav-text">7.软间隔向量机，KKT 条件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-对率回归与支持向量机关系"><span class="nav-number">3.8.</span> <span class="nav-text">8.对率回归与支持向量机关系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-正则化（regularization）"><span class="nav-number">3.9.</span> <span class="nav-text">9.正则化（regularization）</span></a></li></ol></li></ol></div>
             
 
           </div>
