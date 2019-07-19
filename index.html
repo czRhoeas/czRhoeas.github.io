@@ -330,19 +330,27 @@
       
         
           
-            <h2 id="6-2-对偶问题"><a href="#6-2-对偶问题" class="headerlink" title="6.2 对偶问题"></a>6.2 对偶问题</h2><p>用拉格朗日乘子法求解式（6.6）即可得到其“对偶问题”</p>
-<p><img src="/2019/07/18/西瓜书第六章/1.png" alt="式1"></p>
-<p><img src="/2019/07/18/西瓜书第六章/2.png" alt="式2"></p>
-<p><img src="/2019/07/18/西瓜书第六章/3.png" alt="式3"></p>
-<p><img src="/2019/07/18/西瓜书第六章/7.png" alt="式（6.8）"></p>
-<p><img src="/2019/07/18/西瓜书第六章/5.png" alt="式（6.8）"></p>
-<p><img src="/2019/07/18/西瓜书第六章/6.png" alt="式（6.8）"></p>
-<p><img src="/2019/07/18/西瓜书第六章/8-1.png" alt="式（6.8）"></p>
-<p>拉格朗日乘子对应训练样本（xi，yi），上述过程需满足KKT条件（Karush-Kuhn-Tuchker）</p>
+            <h1 id="6-2-对偶问题"><a href="#6-2-对偶问题" class="headerlink" title="6.2 对偶问题"></a>6.2 对偶问题</h1><h2 id="1-拉格朗日乘子法"><a href="#1-拉格朗日乘子法" class="headerlink" title="1.拉格朗日乘子法"></a>1.拉格朗日乘子法</h2><p>不考虑极值是否存在，假设优化问题一定有解</p>
+<p><img src="/2019/07/18/西瓜书第六章/17.png" alt="式1"><br><img src="/2019/07/18/西瓜书第六章/18.png" alt="式1"></p>
+<h3 id="如何求下确界表达式？"><a href="#如何求下确界表达式？" class="headerlink" title="如何求下确界表达式？"></a>如何求下确界表达式？</h3><p><img src="/2019/07/18/西瓜书第六章/22.png" alt="式1"></p>
+<h2 id="2-对偶问题"><a href="#2-对偶问题" class="headerlink" title="2.对偶问题"></a>2.对偶问题</h2><p>用拉格朗日乘子法求解式（6.6）即可得到其“对偶问题”</p>
+<h3 id="式6-8"><a href="#式6-8" class="headerlink" title="式6.8"></a>式6.8</h3><p><img src="/2019/07/18/西瓜书第六章/1.png" alt="式1"><br><img src="/2019/07/18/西瓜书第六章/19.png" alt="式1"><br><img src="/2019/07/18/西瓜书第六章/2.png" alt="式2"></p>
+<h3 id="式6-9、6-10"><a href="#式6-9、6-10" class="headerlink" title="式6.9、6.10"></a>式6.9、6.10</h3><p><img src="/2019/07/18/西瓜书第六章/3.png" alt="式3"><br><img src="/2019/07/18/西瓜书第六章/20.png" alt="式3"></p>
+<h3 id="式6-11"><a href="#式6-11" class="headerlink" title="式6.11"></a>式6.11</h3><p><img src="/2019/07/18/西瓜书第六章/7.png" alt="式（6.8）"><br><img src="/2019/07/18/西瓜书第六章/5.png" alt="式（6.8）"><br><img src="/2019/07/18/西瓜书第六章/21.png" alt="式（6.8）"></p>
+<h3 id="式6-12"><a href="#式6-12" class="headerlink" title="式6.12"></a>式6.12</h3><p><img src="/2019/07/18/西瓜书第六章/8-1.png" alt="式（6.8）"></p>
+<p>将式6.9直接代入即可</p>
+<p>x——待预测示例（未见示例）</p>
+<p>xi——预测中示例</p>
+<p>拉格朗日乘子求解——SMO算法</p>
+<p>已知拉格朗日乘子，6.9求得w，6.17和6.18得到偏移项b</p>
+<h2 id="3-KKT条件（Karush-Kuhn-Tuchker）"><a href="#3-KKT条件（Karush-Kuhn-Tuchker）" class="headerlink" title="3.KKT条件（Karush-Kuhn-Tuchker）"></a>3.KKT条件（Karush-Kuhn-Tuchker）</h2><p>拉格朗日乘子对应训练样本（xi，yi），上述过程需满足KKT条件（Karush-Kuhn-Tuchker）</p>
 <p><img src="/2019/07/18/西瓜书第六章/9-1.png" alt="式（6.8）"></p>
-<p><img src="/2019/07/18/西瓜书第六章/10-1.png" alt="式（6.8）"></p>
+<p>注：1.不等式约束拉格朗日乘子不小于0；2.（6.6）约束条件，用f（xi）代替wx+b； 3.前两式必有一个为0</p>
+<p><img src="/2019/07/18/西瓜书第六章/13.png" alt="式（6.8）"><br><img src="/2019/07/18/西瓜书第六章/10-1.png" alt="式（6.8）"></p>
 <p>支持向量重要性质1：训练完成后，大部分训练样本都不需要保留，最终模型仅与支持向量有关</p>
-<h3 id="SMOSequential-Minimal-Optimization）算法"><a href="#SMOSequential-Minimal-Optimization）算法" class="headerlink" title="SMOSequential Minimal Optimization）算法"></a>SMOSequential Minimal Optimization）算法</h3><p>提出原因：6.11是二次规划问题，可使用通用二次规划算法求解，然，该问题规模正比于训练样本数，在实际任务中开销大。</p>
+<p><a href="http://www.csc.kth.se/utbildning/kth/kurser/DD3364/Lectures/Duality.pdf" target="_blank" rel="noopener">KKT conditions and Duality</a></p>
+<p><a href="http://www.csc.kth.se/utbildning/kth/kurser/DD3364/Lectures/KKT.pdf" target="_blank" rel="noopener">Lagrange Multipliers and the Karush-Kuhn-Tucker conditions</a></p>
+<h2 id="4-SMO（Sequential-Minimal-Optimization）算法"><a href="#4-SMO（Sequential-Minimal-Optimization）算法" class="headerlink" title="4.SMO（Sequential Minimal Optimization）算法"></a>4.SMO（Sequential Minimal Optimization）算法</h2><p>提出原因：6.11是二次规划问题，可使用通用二次规划算法求解，然，该问题规模正比于训练样本数，在实际任务中开销大。</p>
 <p>基本思想</p>
 <p><img src="/2019/07/18/西瓜书第六章/11-1.png" alt="式（6.8）"></p>
 <p>注：只要ai，aj中有一个不满足KKT，目标函数就会在迭代后减小</p>
@@ -350,7 +358,13 @@
 <p>由于比较各变量对应目标函数值减幅的复杂度过高，SMO采用启发式：使选取的两变量对应样本间间隔最大，即差别大的变量比相似变量更新，带给目值更大的变化</p>
 <p>SMO高效原因：固定其他参数后，仅优化两个参数过程能做到非常高效，具体，仅考虑ai和aj时，6.11中约束可重写为</p>
 <p><img src="/2019/07/18/西瓜书第六章/12-1.png" alt="式（6.8）"></p>
-<h2 id="6-3核函数"><a href="#6-3核函数" class="headerlink" title="6.3核函数"></a>6.3核函数</h2>
+<h1 id="6-3核函数"><a href="#6-3核函数" class="headerlink" title="6.3核函数"></a>6.3核函数</h1><p>假设训练样本线性可分，即存在一个划分超平面能将训练样本正确分类，实际中，“异或”问题就不是线性可分的</p>
+<p><img src="/2019/07/18/西瓜书第六章/14.png" alt="式（6.8）"></p>
+<p>解决方法：将样本从原始空间映射到一个更高维的特征空间，使其在特征空间内线性可分。例：如图，将原始二维映射到三维，能找到一个合适的划分超平面。如果空间是有限维，即属性数有限，那么一定存在一个高维特征空间使样本可分。</p>
+<h2 id="特征空间划分超平面模型"><a href="#特征空间划分超平面模型" class="headerlink" title="特征空间划分超平面模型"></a>特征空间划分超平面模型</h2><p><img src="/2019/07/18/西瓜书第六章/15.png" alt="式（6.8）"></p>
+<p>注意：W维度不再与x相同</p>
+<p><img src="/2019/07/18/西瓜书第六章/16.png" alt="式（6.8）"></p>
+
           
         
       
