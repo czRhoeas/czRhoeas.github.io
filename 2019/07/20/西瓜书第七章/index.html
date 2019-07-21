@@ -79,22 +79,29 @@
 
 
 
-<meta name="description" content="贝叶斯决策论f(x)=x^2极大似然估计极大似然估计（Maximum Likelihood Estimation，MLE） 估计类条件概率常用策略 假定其具有某种确定的概率分布形式  基于训练样本对概率分布进行参数估计">
+<meta name="description" content="贝叶斯决策论极大似然估计极大似然估计（Maximum Likelihood Estimation，MLE） 估计类条件概率常用策略 假定其具有某种确定的概率分布形式  基于训练样本对概率分布进行参数估计">
 <meta name="keywords" content="西瓜书">
 <meta property="og:type" content="article">
 <meta property="og:title" content="西瓜书第七章">
 <meta property="og:url" content="http://yoursite.com/2019/07/20/西瓜书第七章/index.html">
 <meta property="og:site_name" content="czRhoeas">
-<meta property="og:description" content="贝叶斯决策论f(x)=x^2极大似然估计极大似然估计（Maximum Likelihood Estimation，MLE） 估计类条件概率常用策略 假定其具有某种确定的概率分布形式  基于训练样本对概率分布进行参数估计">
+<meta property="og:description" content="贝叶斯决策论极大似然估计极大似然估计（Maximum Likelihood Estimation，MLE） 估计类条件概率常用策略 假定其具有某种确定的概率分布形式  基于训练样本对概率分布进行参数估计">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/2019/07/20/西瓜书第七章/1.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/20/西瓜书第七章/2.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/20/西瓜书第七章/3.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/20/西瓜书第七章/4.png">
-<meta property="og:updated_time" content="2019-07-21T07:07:46.525Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/20/西瓜书第七章/5.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/20/西瓜书第七章/7.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/20/西瓜书第七章/6.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/20/西瓜书第七章/8.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/20/西瓜书第七章/9.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/20/西瓜书第七章/10.png">
+<meta property="og:image" content="http://yoursite.com/2019/07/20/西瓜书第七章/11.png">
+<meta property="og:updated_time" content="2019-07-21T14:50:41.431Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="西瓜书第七章">
-<meta name="twitter:description" content="贝叶斯决策论f(x)=x^2极大似然估计极大似然估计（Maximum Likelihood Estimation，MLE） 估计类条件概率常用策略 假定其具有某种确定的概率分布形式  基于训练样本对概率分布进行参数估计">
+<meta name="twitter:description" content="贝叶斯决策论极大似然估计极大似然估计（Maximum Likelihood Estimation，MLE） 估计类条件概率常用策略 假定其具有某种确定的概率分布形式  基于训练样本对概率分布进行参数估计">
 <meta name="twitter:image" content="http://yoursite.com/2019/07/20/西瓜书第七章/1.png">
 
 
@@ -335,7 +342,7 @@
       
 
       
-        <h1 id="贝叶斯决策论"><a href="#贝叶斯决策论" class="headerlink" title="贝叶斯决策论"></a>贝叶斯决策论</h1><script type="math/tex; mode=display">f(x)=x^2</script><h1 id="极大似然估计"><a href="#极大似然估计" class="headerlink" title="极大似然估计"></a>极大似然估计</h1><p>极大似然估计（Maximum Likelihood Estimation，MLE）</p>
+        <h1 id="贝叶斯决策论"><a href="#贝叶斯决策论" class="headerlink" title="贝叶斯决策论"></a>贝叶斯决策论</h1><h1 id="极大似然估计"><a href="#极大似然估计" class="headerlink" title="极大似然估计"></a>极大似然估计</h1><p>极大似然估计（Maximum Likelihood Estimation，MLE）</p>
 <h2 id="估计类条件概率常用策略"><a href="#估计类条件概率常用策略" class="headerlink" title="估计类条件概率常用策略"></a>估计类条件概率常用策略</h2><ol>
 <li><p>假定其具有某种确定的概率分布形式</p>
 </li>
@@ -383,7 +390,7 @@
 <li>arg max 使后面式子达到最大时变量的取值</li>
 </ul>
 <p><img src="/2019/07/20/西瓜书第七章/3.png" alt="3"></p>
-<p><img src="/2019/07/20/西瓜书第七章/4.png" alt="3"></p>
+<p><img src="/2019/07/20/西瓜书第七章/4.png" alt="4"></p>
 <h2 id="MLE评估"><a href="#MLE评估" class="headerlink" title="MLE评估"></a>MLE评估</h2><ul>
 <li><p>优： 使类条件概率估计变得简单</p>
 </li>
@@ -392,7 +399,29 @@
 <li><p>现实应用中，想得到能较好地接近潜在真实分布的假设，常需要在一定程度上利用关于应用本身的经验知识。仅凭“猜测” 来假设概率分布形式，很可能产生误导性结果。</p>
 </li>
 </ul>
-<h1 id="朴素贝叶斯分类器"><a href="#朴素贝叶斯分类器" class="headerlink" title="朴素贝叶斯分类器"></a>朴素贝叶斯分类器</h1>
+<h1 id="朴素贝叶斯分类器"><a href="#朴素贝叶斯分类器" class="headerlink" title="朴素贝叶斯分类器"></a>朴素贝叶斯分类器</h1><h2 id="朴素贝叶斯分类器概念"><a href="#朴素贝叶斯分类器概念" class="headerlink" title="朴素贝叶斯分类器概念"></a>朴素贝叶斯分类器概念</h2><ul>
+<li><p>基于贝叶斯公式7.8来估计后验概率 P(c|x) 主要困难：类条件概率 P(x|c) 是所有属性上的联合概率，难以从有限的训练样本直接估计而得。</p>
+</li>
+<li><p>朴素贝叶斯分类器（Naive Bayes classifier）采用“属性条件独立性假设”（attribute conditional independence assumption）避免上述障碍</p>
+</li>
+<li><p>属性条件独立性假设：对已知类别，假设所有属性互相独立。即，假设每个属性独立地对分类结果发生影响</p>
+</li>
+</ul>
+<p><img src="/2019/07/20/西瓜书第七章/5.png" alt="5"></p>
+<p><img src="/2019/07/20/西瓜书第七章/7.png" alt="7"></p>
+<h2 id="朴素贝叶斯分类器条件概率估计方法"><a href="#朴素贝叶斯分类器条件概率估计方法" class="headerlink" title="朴素贝叶斯分类器条件概率估计方法"></a>朴素贝叶斯分类器条件概率估计方法</h2><p><img src="/2019/07/20/西瓜书第七章/6.png" alt="6"></p>
+<ul>
+<li><p>离散属性：直接按频率计数。 |·|——求集合元素的个数</p>
+</li>
+<li><p>连续属性：连续变量必须假设一种概率分布，此处概率密度函数并非概率，即取值范围不是0~1。</p>
+</li>
+</ul>
+<p><img src="/2019/07/20/西瓜书第七章/8.png" alt="6"></p>
+<h3 id="举例"><a href="#举例" class="headerlink" title="举例"></a>举例</h3><p><img src="/2019/07/20/西瓜书第七章/9.png" alt="6"></p>
+<h2 id="拉普拉斯修正"><a href="#拉普拉斯修正" class="headerlink" title="拉普拉斯修正"></a>拉普拉斯修正</h2><p><img src="/2019/07/20/西瓜书第七章/10.png" alt="6"></p>
+<h3 id="评估"><a href="#评估" class="headerlink" title="评估"></a>评估</h3><p>拉普拉斯修正避免了因训练样本不充分而导致概率估值为零的问题，并且在训练集变大时，修正过程所引入的先验的影响也会变得可忽略，使得估值渐趋向于实际概率值</p>
+<h2 id="朴素贝叶斯分类器使用方式"><a href="#朴素贝叶斯分类器使用方式" class="headerlink" title="朴素贝叶斯分类器使用方式"></a>朴素贝叶斯分类器使用方式</h2><p><img src="/2019/07/20/西瓜书第七章/11.png" alt="6"></p>
+
       
     </div>
     
@@ -553,7 +582,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#贝叶斯决策论"><span class="nav-number">1.</span> <span class="nav-text">贝叶斯决策论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#极大似然估计"><span class="nav-number">2.</span> <span class="nav-text">极大似然估计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#估计类条件概率常用策略"><span class="nav-number">2.1.</span> <span class="nav-text">估计类条件概率常用策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数估计（parameter-estimation）"><span class="nav-number">2.2.</span> <span class="nav-text">参数估计（parameter estimation）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#极大似然估计-极大似然法-MLE"><span class="nav-number">2.3.</span> <span class="nav-text">极大似然估计/极大似然法 MLE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MLE评估"><span class="nav-number">2.4.</span> <span class="nav-text">MLE评估</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#朴素贝叶斯分类器"><span class="nav-number">3.</span> <span class="nav-text">朴素贝叶斯分类器</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#贝叶斯决策论"><span class="nav-number">1.</span> <span class="nav-text">贝叶斯决策论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#极大似然估计"><span class="nav-number">2.</span> <span class="nav-text">极大似然估计</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#估计类条件概率常用策略"><span class="nav-number">2.1.</span> <span class="nav-text">估计类条件概率常用策略</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参数估计（parameter-estimation）"><span class="nav-number">2.2.</span> <span class="nav-text">参数估计（parameter estimation）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#极大似然估计-极大似然法-MLE"><span class="nav-number">2.3.</span> <span class="nav-text">极大似然估计/极大似然法 MLE</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MLE评估"><span class="nav-number">2.4.</span> <span class="nav-text">MLE评估</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#朴素贝叶斯分类器"><span class="nav-number">3.</span> <span class="nav-text">朴素贝叶斯分类器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#朴素贝叶斯分类器概念"><span class="nav-number">3.1.</span> <span class="nav-text">朴素贝叶斯分类器概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#朴素贝叶斯分类器条件概率估计方法"><span class="nav-number">3.2.</span> <span class="nav-text">朴素贝叶斯分类器条件概率估计方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#举例"><span class="nav-number">3.2.1.</span> <span class="nav-text">举例</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拉普拉斯修正"><span class="nav-number">3.3.</span> <span class="nav-text">拉普拉斯修正</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#评估"><span class="nav-number">3.3.1.</span> <span class="nav-text">评估</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#朴素贝叶斯分类器使用方式"><span class="nav-number">3.4.</span> <span class="nav-text">朴素贝叶斯分类器使用方式</span></a></li></ol></li></ol></div>
             
 
           </div>
