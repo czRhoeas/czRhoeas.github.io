@@ -115,7 +115,8 @@
 <meta property="og:image" content="http://yoursite.com/2019/07/23/西瓜书第五章/27.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/23/西瓜书第五章/28.png">
 <meta property="og:image" content="http://yoursite.com/2019/07/23/西瓜书第五章/29.png">
-<meta property="og:updated_time" content="2019-07-25T12:35:42.899Z">
+<meta property="og:image" content="http://yoursite.com/2019/07/23/西瓜书第五章/33.png">
+<meta property="og:updated_time" content="2019-07-26T15:10:24.570Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="西瓜书第五章 神经网络">
 <meta name="twitter:description" content="神经元模型 神经网络（neural networks）：神经网络是由具有适应性的简单单元组成的广泛并行互连的网络，它的组织能够模拟生物神经系统对真实世界物体所作出的“交互反应”。[Kohonen, 1988].机器学习中神经网络指“神经网络学习”或机器学习和神经网络交叉部分  神经元（neuron）模型：“简单元”  “阈值”（threshole）：生物神经网络，每个神经元与其它神经元相连，“兴奋">
@@ -434,6 +435,13 @@
 <p><img src="/2019/07/23/西瓜书第五章/27.png" alt="12"></p>
 <p><img src="/2019/07/23/西瓜书第五章/28.png" alt="12"></p>
 <p><img src="/2019/07/23/西瓜书第五章/29.png" alt="12"></p>
+<h1 id="全局极小与局部极小"><a href="#全局极小与局部极小" class="headerlink" title="全局极小与局部极小"></a>全局极小与局部极小</h1><p>若E表示神经网络在训练集上的误差，E是关于连接权w和阈值的函数。神经网络训练过程可看作一个参数寻优过程，即，在参数空间中，寻找一组最优解使得E最小</p>
+<p><img src="/2019/07/23/西瓜书第五章/33.png" alt="12"></p>
+<p>局部极小点：参数空间中内梯度为0的点，只要其误差函数值小于邻点的误差函数值，就是局部极小</p>
+<p>可能存在多个局部极小值，但却只会有一个全局最小值</p>
+<p>全局最小一定是局部极小，反之不成立</p>
+<p>基于梯度的搜索是使用最为广泛的参数寻优方法。</p>
+<p>遗传算法常用来训练神经网络以更好的逼近全局最小。</p>
 
       
     </div>
@@ -595,7 +603,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#神经元模型"><span class="nav-number">1.</span> <span class="nav-text">神经元模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#M-P神经元模型"><span class="nav-number">1.1.</span> <span class="nav-text">M-P神经元模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#激活函数"><span class="nav-number">1.2.</span> <span class="nav-text">激活函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">1.3.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#感知机与多层网络"><span class="nav-number">2.</span> <span class="nav-text">感知机与多层网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#感知机（Perceptron）"><span class="nav-number">2.1.</span> <span class="nav-text">感知机（Perceptron）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#感知机学习规则"><span class="nav-number">2.1.1.</span> <span class="nav-text">感知机学习规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性可分与非线性可分问题"><span class="nav-number">2.2.</span> <span class="nav-text">线性可分与非线性可分问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解决非线性可分问题——两层感知机（异或问题）"><span class="nav-number">2.2.1.</span> <span class="nav-text">解决非线性可分问题——两层感知机（异或问题）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多层前馈神经网络"><span class="nav-number">2.3.</span> <span class="nav-text">多层前馈神经网络</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#误差逆传播算法"><span class="nav-number">3.</span> <span class="nav-text">误差逆传播算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#BP算法"><span class="nav-number">3.1.</span> <span class="nav-text">BP算法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#神经元模型"><span class="nav-number">1.</span> <span class="nav-text">神经元模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#M-P神经元模型"><span class="nav-number">1.1.</span> <span class="nav-text">M-P神经元模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#激活函数"><span class="nav-number">1.2.</span> <span class="nav-text">激活函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#小结"><span class="nav-number">1.3.</span> <span class="nav-text">小结</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#感知机与多层网络"><span class="nav-number">2.</span> <span class="nav-text">感知机与多层网络</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#感知机（Perceptron）"><span class="nav-number">2.1.</span> <span class="nav-text">感知机（Perceptron）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#感知机学习规则"><span class="nav-number">2.1.1.</span> <span class="nav-text">感知机学习规则</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性可分与非线性可分问题"><span class="nav-number">2.2.</span> <span class="nav-text">线性可分与非线性可分问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解决非线性可分问题——两层感知机（异或问题）"><span class="nav-number">2.2.1.</span> <span class="nav-text">解决非线性可分问题——两层感知机（异或问题）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多层前馈神经网络"><span class="nav-number">2.3.</span> <span class="nav-text">多层前馈神经网络</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#误差逆传播算法"><span class="nav-number">3.</span> <span class="nav-text">误差逆传播算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#BP算法"><span class="nav-number">3.1.</span> <span class="nav-text">BP算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#全局极小与局部极小"><span class="nav-number">4.</span> <span class="nav-text">全局极小与局部极小</span></a></li></ol></div>
             
 
           </div>
