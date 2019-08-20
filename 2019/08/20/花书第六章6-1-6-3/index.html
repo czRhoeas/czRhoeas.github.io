@@ -79,29 +79,35 @@
 
 
 
-<meta name="description" content="第一周 8月1日—8月2日 花书第三四章 花书中文版 https://github.com/exacity/deeplearningbook-chinese 极大似然估计、误差的高斯分布、最小二乘的等价性、有约束最优化、无约束最优化">
+<meta name="description" content="前馈神经网络结构表达能力前馈神经网络——一个特征经过变换后直接输出循环神经网络（RNN）——某个特征变换后的某个输出是另一个特征变换的输入，中间存在反馈机制 例如：经过第一个隐层，函数为f1，结果：f1（x1）经过第二个隐层，函数为f2，结果：f2（f1（x1））经过第三个隐层，函数为f3，结果：f3（f2（f1（x1）））一般情况下，中间层可为线性/非线性变换，最后一层为线性变换      序号">
 <meta name="keywords" content="花书">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【深度之眼花书训练营第二期】花书第三四章 概率与信息论&amp;数值计算">
-<meta property="og:url" content="http://yoursite.com/2019/08/01/花书三四章/index.html">
+<meta property="og:title" content="【深度之眼花书训练营第二期】花书第六章6.1-6.3">
+<meta property="og:url" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/index.html">
 <meta property="og:site_name" content="czRhoeas">
-<meta property="og:description" content="第一周 8月1日—8月2日 花书第三四章 花书中文版 https://github.com/exacity/deeplearningbook-chinese 极大似然估计、误差的高斯分布、最小二乘的等价性、有约束最优化、无约束最优化">
+<meta property="og:description" content="前馈神经网络结构表达能力前馈神经网络——一个特征经过变换后直接输出循环神经网络（RNN）——某个特征变换后的某个输出是另一个特征变换的输入，中间存在反馈机制 例如：经过第一个隐层，函数为f1，结果：f1（x1）经过第二个隐层，函数为f2，结果：f2（f1（x1））经过第三个隐层，函数为f3，结果：f3（f2（f1（x1）））一般情况下，中间层可为线性/非线性变换，最后一层为线性变换      序号">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/2019/08/01/花书三四章/20.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/01/花书三四章/2.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/01/花书三四章/3.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/01/花书三四章/5.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/01/花书三四章/4.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/08/01/花书三四章/7.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/01/花书三四章/9.jpg">
-<meta property="og:image" content="http://yoursite.com/2019/08/01/花书三四章/10.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/01/花书三四章/11.png">
-<meta property="og:image" content="http://yoursite.com/2019/08/01/花书三四章/12.png">
-<meta property="og:updated_time" content="2019-08-03T08:15:00.896Z">
+<meta property="og:image" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/1.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/2.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/3.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/4.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/5.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/6.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/8.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/9.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/10.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/11.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/12.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/13.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/14.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/15.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/16.png">
+<meta property="og:image" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/17.png">
+<meta property="og:updated_time" content="2019-08-20T14:43:57.130Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【深度之眼花书训练营第二期】花书第三四章 概率与信息论&amp;数值计算">
-<meta name="twitter:description" content="第一周 8月1日—8月2日 花书第三四章 花书中文版 https://github.com/exacity/deeplearningbook-chinese 极大似然估计、误差的高斯分布、最小二乘的等价性、有约束最优化、无约束最优化">
-<meta name="twitter:image" content="http://yoursite.com/2019/08/01/花书三四章/20.png">
+<meta name="twitter:title" content="【深度之眼花书训练营第二期】花书第六章6.1-6.3">
+<meta name="twitter:description" content="前馈神经网络结构表达能力前馈神经网络——一个特征经过变换后直接输出循环神经网络（RNN）——某个特征变换后的某个输出是另一个特征变换的输入，中间存在反馈机制 例如：经过第一个隐层，函数为f1，结果：f1（x1）经过第二个隐层，函数为f2，结果：f2（f1（x1））经过第三个隐层，函数为f3，结果：f3（f2（f1（x1）））一般情况下，中间层可为线性/非线性变换，最后一层为线性变换      序号">
+<meta name="twitter:image" content="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/1.png">
 
 
 
@@ -131,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/01/花书三四章/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/">
 
 
 
 
 
-  <title>【深度之眼花书训练营第二期】花书第三四章 概率与信息论&数值计算 | czRhoeas</title>
+  <title>【深度之眼花书训练营第二期】花书第六章6.1-6.3 | czRhoeas</title>
   
 
 
@@ -274,7 +280,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/01/花书三四章/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Rhoeas">
@@ -291,7 +297,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【深度之眼花书训练营第二期】花书第三四章 概率与信息论&数值计算</h1>
+          <h1 class="post-title" itemprop="name headline">【深度之眼花书训练营第二期】花书第六章6.1-6.3</h1>
         
 
         <div class="post-meta">
@@ -303,8 +309,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-01T20:52:14+08:00">
-                2019-08-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-20T20:13:13+08:00">
+                2019-08-20
               </time>
             
 
@@ -341,30 +347,61 @@
       
 
       
-        <p>第一周 8月1日—8月2日</p>
-<p>花书第三四章</p>
-<p>花书中文版 <a href="https://github.com/exacity/deeplearningbook-chinese" target="_blank" rel="noopener">https://github.com/exacity/deeplearningbook-chinese</a></p>
-<p>极大似然估计、误差的高斯分布、最小二乘的等价性、有约束最优化、无约束最优化</p>
-<a id="more"></a>
-<h1 id="概率与信息论"><a href="#概率与信息论" class="headerlink" title="概率与信息论"></a>概率与信息论</h1><p><img src="/2019/08/01/花书三四章/20.png" alt="1"></p>
-<h1 id="数值计算"><a href="#数值计算" class="headerlink" title="数值计算"></a>数值计算</h1><p><img src="/2019/08/01/花书三四章/2.png" alt="1"></p>
-<h1 id="极大似然估计"><a href="#极大似然估计" class="headerlink" title="极大似然估计"></a>极大似然估计</h1><h3 id="极大似然估计-1"><a href="#极大似然估计-1" class="headerlink" title="极大似然估计"></a>极大似然估计</h3><p><img src="/2019/08/01/花书三四章/3.png" alt="1"></p>
-<ul>
-<li>各个样本独立同分布</li>
-<li>各个样本函数相乘</li>
-<li>对数似然估计，将乘法变为加法</li>
-<li>极大似然估计，偏导</li>
-</ul>
-<h3 id="误差的高斯分布"><a href="#误差的高斯分布" class="headerlink" title="误差的高斯分布"></a>误差的高斯分布</h3><p><img src="/2019/08/01/花书三四章/5.png" alt="1"></p>
-<p><img src="/2019/08/01/花书三四章/4.jpg" alt="1"></p>
-<h3 id="最小二乘的等价性"><a href="#最小二乘的等价性" class="headerlink" title="最小二乘的等价性"></a>最小二乘的等价性</h3><p><img src="/2019/08/01/花书三四章/7.png" alt="1"></p>
-<ul>
-<li>wx’= w’x, w、x为向量</li>
-</ul>
-<h1 id="无约束最优化"><a href="#无约束最优化" class="headerlink" title="无约束最优化"></a>无约束最优化</h1><p><img src="/2019/08/01/花书三四章/9.jpg" alt="1"></p>
-<p><img src="/2019/08/01/花书三四章/10.png" alt="1"></p>
-<h1 id="有约束最优化"><a href="#有约束最优化" class="headerlink" title="有约束最优化"></a>有约束最优化</h1><p><img src="/2019/08/01/花书三四章/11.png" alt="1"></p>
-<p><img src="/2019/08/01/花书三四章/12.png" alt="1"></p>
+        <h2 id="前馈神经网络结构表达能力"><a href="#前馈神经网络结构表达能力" class="headerlink" title="前馈神经网络结构表达能力"></a>前馈神经网络结构表达能力</h2><p><img src="/2019/08/20/花书第六章6-1-6-3/1.png" alt="1"><br>前馈神经网络——一个特征经过变换后直接输出<br>循环神经网络（RNN）——某个特征变换后的某个输出是另一个特征变换的输入，中间存在反馈机制</p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/2.png" alt="1"><br>例如：经过第一个隐层，函数为f1，结果：f1（x1）<br>经过第二个隐层，函数为f2，结果：f2（f1（x1））<br>经过第三个隐层，函数为f3，结果：f3（f2（f1（x1）））<br>一般情况下，中间层可为线性/非线性变换，最后一层为<strong>线性变换</strong></p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/3.png" alt="1"></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>输入</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>(0,0)</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>(1,0)</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>(0,1)</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>(1,1)</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>简单单层线性函数 y=w1x1 + w2x2 + b  无法解决异或问题，没有办法画出一条直线进行分类<br>因此我们可以增加深度，即加入隐层单元<br>x——f1——h，h见图2</p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/4.png" alt="1"><br>f1 = relu（w’x+c）<br>relu = 0 (x&lt;=0) , x (x&gt;0)<br>X——行-样本数，列-维度<br>+c之后通过relu  </p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/5.png" alt="1"><br>h1 Z1 可看作第一个隐层  </p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/6.png" alt="1"><br>1-理论上经过h1 Z1 后可以逼近任何连续函数<br>2-单隐层参数很难学习，多隐层容易<br>3-根据过往经验选择层数</p>
+<p>层数增多后，需要学习的参数多，模型容量会变大，导致在训练集得到结果好，测试集结果变差，过拟合问题<br>解决：正则化、dropout等<br>dropout，如DNN中，节点全连接，dropout就是随机砍掉一些边</p>
+<h2 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h2><p><img src="/2019/08/20/花书第六章6-1-6-3/8.png" alt="1"><br>中心点，饱和点不同</p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/9.png" alt="1"></p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/10.png" alt="1"><br>Sigmod 优点：噪声情况下变得稳定，尤其是在饱和区中</p>
+<h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p><img src="/2019/08/20/花书第六章6-1-6-3/11.png" alt="1"><br>yi=（yi1……yiN）</p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/12.png" alt="1"><br>KL距离——两个概率的差异</p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/13.png" alt="1">  </p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/14.png" alt="1"><br>对所有样本</p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/15.png" alt="1">  </p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/16.png" alt="1">  </p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/17.png" alt="1">  </p>
 
       
     </div>
@@ -395,8 +432,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/31/花书第一二章/" rel="next" title="【深度之眼花书训练营第二期】第一二章 引言&线性代数">
-                <i class="fa fa-chevron-left"></i> 【深度之眼花书训练营第二期】第一二章 引言&线性代数
+              <a href="/2019/08/09/花书第五章5-5-5-7-1/" rel="next" title="【深度之眼花书训练营第二期】花书第五章 机器学习基础5.5-5.7.1">
+                <i class="fa fa-chevron-left"></i> 【深度之眼花书训练营第二期】花书第五章 机器学习基础5.5-5.7.1
               </a>
             
           </div>
@@ -404,10 +441,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/06/花书第五章5-1-5-4/" rel="prev" title="【深度之眼花书训练营第二期】花书第五章 机器学习基础5.1-5.4">
-                【深度之眼花书训练营第二期】花书第五章 机器学习基础5.1-5.4 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -530,7 +563,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#概率与信息论"><span class="nav-number">1.</span> <span class="nav-text">概率与信息论</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数值计算"><span class="nav-number">2.</span> <span class="nav-text">数值计算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#极大似然估计"><span class="nav-number">3.</span> <span class="nav-text">极大似然估计</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#极大似然估计-1"><span class="nav-number">3.0.1.</span> <span class="nav-text">极大似然估计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#误差的高斯分布"><span class="nav-number">3.0.2.</span> <span class="nav-text">误差的高斯分布</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最小二乘的等价性"><span class="nav-number">3.0.3.</span> <span class="nav-text">最小二乘的等价性</span></a></li></ol></li></ol><li class="nav-item nav-level-1"><a class="nav-link" href="#无约束最优化"><span class="nav-number">4.</span> <span class="nav-text">无约束最优化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#有约束最优化"><span class="nav-number">5.</span> <span class="nav-text">有约束最优化</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前馈神经网络结构表达能力"><span class="nav-number">1.</span> <span class="nav-text">前馈神经网络结构表达能力</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#激活函数"><span class="nav-number">2.</span> <span class="nav-text">激活函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#损失函数"><span class="nav-number">3.</span> <span class="nav-text">损失函数</span></a></li></ol></div>
             
 
           </div>

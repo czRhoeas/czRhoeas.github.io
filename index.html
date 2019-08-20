@@ -259,6 +259,180 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/20/花书第六章6-1-6-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Rhoeas">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="czRhoeas">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/20/花书第六章6-1-6-3/" itemprop="url">【深度之眼花书训练营第二期】花书第六章6.1-6.3</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-20T20:13:13+08:00">
+                2019-08-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="前馈神经网络结构表达能力"><a href="#前馈神经网络结构表达能力" class="headerlink" title="前馈神经网络结构表达能力"></a>前馈神经网络结构表达能力</h2><p><img src="/2019/08/20/花书第六章6-1-6-3/1.png" alt="1"><br>前馈神经网络——一个特征经过变换后直接输出<br>循环神经网络（RNN）——某个特征变换后的某个输出是另一个特征变换的输入，中间存在反馈机制</p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/2.png" alt="1"><br>例如：经过第一个隐层，函数为f1，结果：f1（x1）<br>经过第二个隐层，函数为f2，结果：f2（f1（x1））<br>经过第三个隐层，函数为f3，结果：f3（f2（f1（x1）））<br>一般情况下，中间层可为线性/非线性变换，最后一层为<strong>线性变换</strong></p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/3.png" alt="1"></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>输入</th>
+<th>输出</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>(0,0)</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>(1,0)</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>(0,1)</td>
+<td>1</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>(1,1)</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>简单单层线性函数 y=w1x1 + w2x2 + b  无法解决异或问题，没有办法画出一条直线进行分类<br>因此我们可以增加深度，即加入隐层单元<br>x——f1——h，h见图2</p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/4.png" alt="1"><br>f1 = relu（w’x+c）<br>relu = 0 (x&lt;=0) , x (x&gt;0)<br>X——行-样本数，列-维度<br>+c之后通过relu  </p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/5.png" alt="1"><br>h1 Z1 可看作第一个隐层  </p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/6.png" alt="1"><br>1-理论上经过h1 Z1 后可以逼近任何连续函数<br>2-单隐层参数很难学习，多隐层容易<br>3-根据过往经验选择层数</p>
+<p>层数增多后，需要学习的参数多，模型容量会变大，导致在训练集得到结果好，测试集结果变差，过拟合问题<br>解决：正则化、dropout等<br>dropout，如DNN中，节点全连接，dropout就是随机砍掉一些边</p>
+<h2 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h2><p><img src="/2019/08/20/花书第六章6-1-6-3/8.png" alt="1"><br>中心点，饱和点不同</p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/9.png" alt="1"></p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/10.png" alt="1"><br>Sigmod 优点：噪声情况下变得稳定，尤其是在饱和区中</p>
+<h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><p><img src="/2019/08/20/花书第六章6-1-6-3/11.png" alt="1"><br>yi=（yi1……yiN）</p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/12.png" alt="1"><br>KL距离——两个概率的差异</p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/13.png" alt="1">  </p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/14.png" alt="1"><br>对所有样本</p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/15.png" alt="1">  </p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/16.png" alt="1">  </p>
+<p><img src="/2019/08/20/花书第六章6-1-6-3/17.png" alt="1">  </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/09/花书第五章5-5-5-7-1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1313,7 +1487,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
